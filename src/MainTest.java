@@ -57,6 +57,15 @@ public class MainTest {
     }
 
 
+    @Test
+    public void test6() throws Exception {
+        String expected = "0.01";
+        String actual = Main.getUserInput("0.01");
+        assertEquals(expected, actual);
+
+    }
+
+
 
 
 

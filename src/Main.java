@@ -1,9 +1,20 @@
+import java.util.Scanner;
+
 public class Main {
 
     //setup basic testing using junit
     public static int answer() {
 
         return 42;
+    }
+
+    //getUserInput & assign to String userInput
+    public static String getUserInput(String args) {
+        Scanner scan = new Scanner(System.in);
+
+        //need to replace args with scan.next(); instead of args
+        String userInput = args;
+        return userInput;
     }
 
     public static String isValidCoin(String coin) {
