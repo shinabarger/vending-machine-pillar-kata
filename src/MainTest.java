@@ -60,7 +60,23 @@ public class MainTest {
     @Test
     public void test6() throws Exception {
         String expected = "0.01";
-        String actual = Main.getUserInput("0.01");
+        String actual = Main.newCoinFromUser("penny");
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void test7Nickel() throws Exception {
+        String expected = "0.05";
+        String actual = Main.newCoinFromUser("nickel");
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void test8Dime() throws Exception {
+        String expected = "0.10";
+        String actual = Main.newCoinFromUser("dime");
         assertEquals(expected, actual);
 
     }
