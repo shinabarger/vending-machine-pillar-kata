@@ -25,6 +25,7 @@ public class MainTest {
     @Test
     //returns a string from validator to see if it is a coin
     public void test1_5() throws Exception {
+        //TODO make these tests work even with the scanning built into the validation
         Scanner scan = new Scanner(System.in);
         String expected = "NO PENNIES. INSERT COIN.";
         String actual = Validator.isValidCoin(scan, "penny");
@@ -36,7 +37,7 @@ public class MainTest {
     @Test
     public void test2() throws Exception {
         Scanner scan = new Scanner(System.in);
-        String expected = "NOT A COIN";
+        String expected = "That wasn't a coin. INSERT COIN";
         String actual = Validator.isValidCoin(scan,"shoelace");
         assertEquals(expected, actual);
 
