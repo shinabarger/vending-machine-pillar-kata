@@ -1,74 +1,155 @@
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Scanner;
+
+/**
+ * Created by David Shinabarger March 2017
+ * Pillar Kata for Apprenticeship Program
+ * You can view the instructions for the program in the README.md
+ */
 
 public class Main {
 
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        //initialize some variables
+        double total = 0;
+        String userInputCoin;
+        String menu = "\n 1. Cola [1.00] \n 2. Chips [$0.50] \n 3. Candy [$0.65";
+        String buySomethingElse = "";
+        String totalAmount = "0.00";
+        double coinReturn = 0.00;
+        String answer = "";
+        double choicePriceDouble = 0.0;
+
+        System.out.println("Welcome!");
+
+        System.out.println(menu);
+
+        do {//validate if they picked one of the 3 products
+            String userProductChoice = Validator.pickProduct(scan, "TYPE COLA, CHIPS, or CANDY to SELECT");
+
+            //get price of product
+            choicePriceDouble = chosenItemPrice(userProductChoice);
+            String choicePrice = String.format("%.2g%n", choicePriceDouble);
+
+            System.out.println(userProductChoice + " costs " + choicePrice + "\nTotal inserted is: " + totalAmount);
+
+            do {
+                //validate if it is a coin
+                System.out.println("INSERT COIN");
+                String userInput = scan.next();
+                userInputCoin = Validator.isValidCoin(scan, userInput);
+
+                //add Coins to Total
+                total += addCoinsToTotal(userInputCoin);
+                totalAmount = String.format("%.2g%n", total);
+                System.out.println(userProductChoice + " costs " + choicePrice + "\nTotal inserted is: " + totalAmount);
+
+            } while (choicePriceDouble > total);
+
+            //ask user if they want to purchase or cancel the order before it processes
+
+            System.out.println("Press N to cancel order completely, anything else to continue.");
+            answer = scan.nextLine();
+            answer = scan.nextLine();
+
+            if (answer.equalsIgnoreCase("n")) {
+                coinReturn = choicePriceDouble;
+                choicePriceDouble = 0.0;
+                choicePrice = String.format("%.2g%n", choicePriceDouble);
+                String coinReturnTotal = String.format("%.2g%n", coinReturn);
+                System.out.println("Total coin return is: " + coinReturnTotal);
+            } else if (!answer.equalsIgnoreCase("n")) {
+
+                System.out.println("YOUR PRODUCT WAS DISPENSED \nTHANK YOU \n");
+
+                System.out.println("Would you like your remaining coins returned? Type yes or no.");
+                answer = scan.nextLine();
+
+                if (answer.equalsIgnoreCase("y") | answer.equalsIgnoreCase("Yes")) {
+                    coinReturn = (total - choicePriceDouble);
+                    totalAmount = String.format("%.2g%n", coinReturn);
+                    total = 0.00;
+                    System.out.println("Don't forget your coins in coin return: " + totalAmount);
+                } else {
+                    total = choicePriceDouble - total;
+
+                    if (total < 0) {
+                        total = 0.0;
+                    }
+                    totalAmount = String.format("%.2g%n", total);
+                    System.out.println("Okay, you have " + totalAmount + " left to use.");
+                }
+
+            }
+
+            System.out.println("Would you like to purchase something else? #2");
+            answer = scan.nextLine();
+        } while (answer.equalsIgnoreCase("Y") | answer.equalsIgnoreCase("yes"));
+
+        System.out.println("Goodbye.");
+
+    }
 
     //getUserInput & assign to String userInput
-    public static String newCoinFromUser(String args) {
+    public static Double addCoinsToTotal(String coinInput) {
+        NumberFormat formatter = new DecimalFormat("#0.00");
+        Scanner scan = new Scanner(System.in);
 
         //declare some variables
         double totalAmountInserted = 0.00;
         double coinReturnTotal = 0.00;
 
-        Scanner scan = new Scanner(System.in);
+        if (coinInput.equals("dime")) {
 
-        //need to replace args with scan.next(); instead of args
-        String coinFromUser = args;
+            totalAmountInserted += 0.10;
+            coinInput = String.format("%.2g%n", totalAmountInserted);
 
-        //check to see if coin from user is valid or not using isValidCoin method
-        //if not valid, tell the user to try again.
-        if (Main.isValidCoin(coinFromUser).equals("not valid")) {
-            System.out.println("Sorry, that's not a valid coin. Please enter a valid coin: ");
-            coinFromUser = scan.next();
+        } else if (coinInput.equals("nickel")) {
+            totalAmountInserted += 0.05;
+        } else if (coinInput.equals("quarter")) {
+
+            totalAmountInserted += 0.25;
         }
-
-        //if valid, count up on total amount inserted, unless it's a penny.
-        //if it's a penny, add 0.01 to the coinreturntotal
-        else if (Main.isValidCoin(coinFromUser).equals("valid")) {
-
-            if(coinFromUser.equals("penny")) {
-                coinReturnTotal += 0.01;
-                System.out.println("Total amount in coin return is: " + coinReturnTotal);
-                coinFromUser = Double.toString(coinReturnTotal);
-
-            } else if(coinFromUser.equals("dime")) {
-
-                //TODO add a decimal place to the end of the double so it displays "0.10" not "0.1" to the user
-                totalAmountInserted += 0.10;
-                System.out.println("Total inserted:  " + totalAmountInserted);
-                coinFromUser = Double.toString(totalAmountInserted);
-            }
-
-        }
-
-
-        return coinFromUser;
+        formatter.format(totalAmountInserted);
+        return totalAmountInserted;
     }
 
+    public static Double chosenItemPrice(String chosenItem) {
+        double priceOfItem = 0.0;
 
-    public static String isValidCoin(String coin) {
-        // write your code here
-        if (coin.equals("quarter") | coin.equals("dime") | coin.equals("nickel") | coin.equals("penny")) {
-            coin = "valid";
-        } else coin = "not valid";
-        return coin;
+        switch (chosenItem.toLowerCase()) {
+            case "cola":
+                priceOfItem += 1.00;
+                break;
+        }
+        switch (chosenItem.toLowerCase()) {
+            case "chips":
+                priceOfItem += 0.50;
+
+                break;
+        }
+        switch (chosenItem.toLowerCase()) {
+            case "candy":
+                priceOfItem += 0.65;
+
+                break;
+        }
+        return priceOfItem;
     }
 
     public static String coinReturnTotal(String coin) {
         if (coin.equals("penny")) {
             double coinReturn = 0.01;
+
             coin = Double.toString(coinReturn);
         }
-
         return coin;
 
     }
 
-    //setup basic testing using junit
-    public static int answer() {
-
-        return 42;
-    }
-
-
 }
+
+//TODO
