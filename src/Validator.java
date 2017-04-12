@@ -4,37 +4,26 @@ import java.util.Scanner;
 
 public class Validator {
 
-    public static String isValidCoin(Scanner sc, String s) {
+    public static String isValidCoin(Scanner sc, String itemInsertedIntoSlot) {
         double coinReturn = 0.00;
-        // read user entry
-
-        boolean isValid = false;
-        while (isValid == false) {
-            if (s.equalsIgnoreCase("quarter")
-                    | s.equalsIgnoreCase("dime")
-                    | s.equalsIgnoreCase("nickel")
-                    ) {
-
-                break;
-
-            } else if (s.equalsIgnoreCase("penny")) {
-                System.out.println("NO PENNIES. INSERT COIN.");
+        String validatingMessage = "";
+            if (itemInsertedIntoSlot.equalsIgnoreCase("penny")) {
+                validatingMessage = "NO PENNIES. INSERT COIN.";
                 coinReturn += 0.01;
-                s = sc.nextLine();
-                isValid = false;
+
+            } else if (!itemInsertedIntoSlot.equalsIgnoreCase("dime")
+                    & !itemInsertedIntoSlot.equalsIgnoreCase("quarter")
+                    & !itemInsertedIntoSlot.equalsIgnoreCase("nickel")) {
+                validatingMessage = "That wasn't a coin. INSERT COIN";
             } else {
-                System.out.println("That wasn't a coin. INSERT COIN");
-                s = sc.nextLine();
-                isValid = false;
+                validatingMessage = itemInsertedIntoSlot;
             }
 
-        }
         if (coinReturn > 0) {
             System.out.println("Amount in coin return is: " + coinReturn + ", please take your coin");
-            sc.nextLine();
         }
 
-        return s;
+        return validatingMessage;
     }
 
     public static String pickProduct(Scanner scan, String prompt) {

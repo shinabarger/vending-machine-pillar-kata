@@ -27,7 +27,8 @@ public class Main {
 
         System.out.println(menu);
 
-        do {//validate if they picked one of the 3 products
+        do {
+            //validate if they picked one of the 3 products
             String userProductChoice = Validator.pickProduct(scan, "TYPE COLA, CHIPS, or CANDY to SELECT");
 
             //get price of product
