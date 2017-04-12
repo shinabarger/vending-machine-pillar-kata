@@ -136,15 +136,22 @@ public class MainTest {
 
     @Test
     public void didUserContinueEqualYes() throws Exception {
-        String expected = "y";
-        String actual = Validator.yesOrNo("y");
+        String expected = "yes";
+        String actual = Validator.yesOrNo("yes");
         assertEquals(expected, actual);
     }
 
     @Test
     public void didUserContinueEqualNo() throws Exception {
-        String expected = "n";
-        String actual = Validator.yesOrNo("n");
+        String expected = "no";
+        String actual = Validator.yesOrNo("no");
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void didAnythingElseReturnErrorMessage() throws Exception {
+        String expected = "not yes or no.";
+        String actual = Validator.yesOrNo("anything else");
         assertEquals(expected, actual);
     }
 

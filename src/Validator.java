@@ -36,7 +36,7 @@ public class Validator {
 
     public static String yesOrNo(String choiceToContinue) {
 
-        if (choiceToContinue.equalsIgnoreCase("y") | choiceToContinue.equalsIgnoreCase("n")) {
+        if (choiceToContinue.equalsIgnoreCase("yes") | choiceToContinue.equalsIgnoreCase("no")) {
             return choiceToContinue;
         } else return "not yes or no.";
 
