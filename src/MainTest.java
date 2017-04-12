@@ -115,23 +115,27 @@ public class MainTest {
     public void whenUserSelectsChipsItIsValidChoice() throws Exception {
         String expected = "chips";
         String actual = Validator.pickChipsColaOrCandy("chips");
+        assertEquals(expected, actual);
     }
 
     @Test
     public void whenUserSelectsColaItIsAValidChoice() throws Exception {
         String expected = "cola";
         String actual = Validator.pickChipsColaOrCandy("cola");
+        assertEquals(expected, actual);
     }
 
     @Test
     public void whenCandyIsSelectedItIsAValidChoice() throws Exception {
         String expected = "candy";
         String actual = Validator.pickChipsColaOrCandy("candy");
+        assertEquals(expected, actual);
     }
     @Test
     public void whenOreoIsSelectedValidatorReturnsInvalid() throws Exception {
         String expected = "invalid";
         String actual = Validator.pickChipsColaOrCandy("oreo");
+        assertEquals(expected, actual);
     }
 
 
