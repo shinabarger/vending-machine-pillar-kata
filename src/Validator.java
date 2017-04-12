@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 //Validators for entire program
 
 public class Validator {
@@ -28,7 +26,6 @@ public class Validator {
 
     public static String pickChipsColaOrCandy(String userChoice) {
 
-
         if (userChoice.equalsIgnoreCase("chips")
                 | userChoice.equalsIgnoreCase("cola")
                 | userChoice.equalsIgnoreCase("candy")
@@ -37,21 +34,12 @@ public class Validator {
         } else return "invalid";
     }
 
-    public static String yesOrNo(Scanner scan, String s) {
+    public static String yesOrNo(String choiceToContinue) {
 
-        boolean isValid = false;
+        if (choiceToContinue.equalsIgnoreCase("y") | choiceToContinue.equalsIgnoreCase("n")) {
+            return choiceToContinue;
+        } else return "not yes or no.";
 
-        while (!isValid) {
-            if (!s.equalsIgnoreCase("y")) {
-                System.out.println("WRONG. That doesn't work. Try again");
-                s = scan.nextLine();
-                scan.next();
-            } else if (s.equalsIgnoreCase("y") | s.equalsIgnoreCase("n")) {
-                isValid = true;
-            }
-        }
-
-        return s;
     }
 
 }

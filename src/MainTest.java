@@ -8,14 +8,12 @@ import static org.junit.Assert.assertEquals;
 
 public class MainTest {
 
-
     @Test
     //returns a string from validator to see if it is a coin
     public void quarterReturnsQuarter() throws Exception {
         String expected = "quarter";
-        String actual = Validator.isValidCoin( "quarter");
+        String actual = Validator.isValidCoin("quarter");
         assertEquals(expected, actual);
-
 
     }
 
@@ -23,9 +21,8 @@ public class MainTest {
     //returns a string from validator to see if it is a coin
     public void pennyReturnsErrorMessageInValidator() throws Exception {
         String expected = "NO PENNIES. INSERT COIN.";
-        String actual = Validator.isValidCoin( "penny");
+        String actual = Validator.isValidCoin("penny");
         assertEquals(expected, actual);
-
 
     }
 
@@ -53,7 +50,6 @@ public class MainTest {
 
     }
 
-
     @Test
     public void pennyAddsNothingToInsertedCoinTotal() throws Exception {
         Double expected = 0.00;
@@ -78,11 +74,10 @@ public class MainTest {
 
     }
 
-
     @Test
     public void quarterAdds25CentsToInsertedCoinTotal() throws Exception {
         Double expected = 0.25;
-        Double actual = Main.addCoinsToTotal( "quarter");
+        Double actual = Main.addCoinsToTotal("quarter");
         assertEquals(expected, actual);
 
     }
@@ -131,6 +126,7 @@ public class MainTest {
         String actual = Validator.pickChipsColaOrCandy("candy");
         assertEquals(expected, actual);
     }
+
     @Test
     public void whenOreoIsSelectedValidatorReturnsInvalid() throws Exception {
         String expected = "invalid";
@@ -138,9 +134,12 @@ public class MainTest {
         assertEquals(expected, actual);
     }
 
-
-
-
+    @Test
+    public void didUserContinueEqualYesOrNo() throws Exception {
+        String expected = "y";
+        String actual = Validator.yesOrNo("y");
+        assertEquals(expected, actual);
+    }
 
 
 
