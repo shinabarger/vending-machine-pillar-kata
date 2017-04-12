@@ -13,23 +13,16 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        //initialize some variables
+
         double total = 0;
         String userInputCoin;
-        String menu = "\n 1. Cola [1.00] \n 2. Chips [$0.50] \n 3. Candy [$0.65";
-        String buySomethingElse = "";
         String totalAmount = "0.00";
         double coinReturn = 0.00;
         String answer = "";
         double choicePriceDouble = 0.0;
 
-        System.out.println("Welcome!");
-
-        System.out.println(menu);
-
         do {
-            //validate if they picked one of the 3 products
-            String userProductChoice = Validator.pickProduct(scan, "TYPE COLA, CHIPS, or CANDY to SELECT");
+            String userProductChoice = Validator.pickChipsColaOrCandy("TYPE COLA, CHIPS, or CANDY to SELECT");
 
             //get price of product
             choicePriceDouble = chosenItemPrice(userProductChoice);

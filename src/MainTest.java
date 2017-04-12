@@ -111,6 +111,13 @@ public class MainTest {
 
     }
 
+    @Test
+    public void whenUserSelectsChipsItIsValidChoice() throws Exception {
+        String expected = "chips";
+        String actual = Validator.pickChipsColaOrCandy("chips");
+    }
+
+
 
 
 
