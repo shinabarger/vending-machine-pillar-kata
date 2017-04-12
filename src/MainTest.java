@@ -13,7 +13,7 @@ public class MainTest {
 
     @Test
     //returns a string from validator to see if it is a coin
-    public void test1() throws Exception {
+    public void quarterReturnsQuarter() throws Exception {
         Scanner scan = new Scanner(System.in);
         String expected = "quarter";
         String actual = Validator.isValidCoin(scan, "quarter");
@@ -24,7 +24,7 @@ public class MainTest {
 
     @Test
     //returns a string from validator to see if it is a coin
-    public void test1_5() throws Exception {
+    public void pennyReturnsErrorMessageInValidator() throws Exception {
         //TODO make these tests work even with the scanning built into the validation
         Scanner scan = new Scanner(System.in);
         String expected = "NO PENNIES. INSERT COIN.";
@@ -35,7 +35,7 @@ public class MainTest {
     }
 
     @Test
-    public void test2() throws Exception {
+    public void aNonCurrencyItemReturnsErrorMessageInValidator() throws Exception {
         Scanner scan = new Scanner(System.in);
         String expected = "That wasn't a coin. INSERT COIN";
         String actual = Validator.isValidCoin(scan,"shoelace");
@@ -44,7 +44,7 @@ public class MainTest {
     }
 
     @Test
-    public void test3() throws Exception {
+    public void dimeReturnsDimeInValidator() throws Exception {
         Scanner scan = new Scanner(System.in);
         String expected = "dime";
         String actual = Validator.isValidCoin(scan, "dime");
@@ -53,7 +53,7 @@ public class MainTest {
     }
 
     @Test
-    public void test4() throws Exception {
+    public void nickelReturnsNickelInValidator() throws Exception {
         Scanner scan = new Scanner(System.in);
         String expected = "nickel";
         String actual = Validator.isValidCoin(scan,"nickel");
@@ -63,7 +63,7 @@ public class MainTest {
 
 
     @Test
-    public void test6() throws Exception {
+    public void pennyAddsNothingToInsertedCoinTotal() throws Exception {
         Scanner scan = new Scanner(System.in);
         Double expected = 0.00;
         Double actual = Main.addCoinsToTotal("penny");
@@ -72,7 +72,7 @@ public class MainTest {
     }
 
     @Test
-    public void test7Nickel() throws Exception {
+    public void nickelAddsFiveCentsToInsertedCoinTotal() throws Exception {
         Double expected = 0.05;
         Double actual = Main.addCoinsToTotal("nickel");
         assertEquals(expected, actual);
@@ -80,7 +80,7 @@ public class MainTest {
     }
 
     @Test
-    public void test8Dime() throws Exception {
+    public void dimeAddsTenCentsToInsertedCoinTotal() throws Exception {
         Double expected = 0.10;
         Double actual = Main.addCoinsToTotal("dime");
         assertEquals(expected, actual);
@@ -89,7 +89,7 @@ public class MainTest {
 
 
     @Test
-    public void test5() throws Exception {
+    public void quarterAdds25CentsToInsertedCoinTotal() throws Exception {
         Scanner scan = new Scanner(System.in);
         Double expected = 0.25;
         Double actual = Main.addCoinsToTotal( "quarter");
@@ -98,7 +98,7 @@ public class MainTest {
     }
 
     @Test
-    public void test9Snickers() throws Exception {
+    public void colaReturnsCorrectItemPriceOf1Dollar() throws Exception {
         Double expected = 1.00;
         Double actual = Main.chosenItemPrice("cola");
         assertEquals(expected, actual);
@@ -106,7 +106,7 @@ public class MainTest {
     }
 
     @Test
-    public void test10Oreos() throws Exception {
+    public void chipsReturnsCorrectItemPriceOf50cents() throws Exception {
         Double expected = 0.5;
         Double actual = Main.chosenItemPrice("chips");
         assertEquals(expected, actual);
@@ -114,7 +114,7 @@ public class MainTest {
     }
 
     @Test
-    public void test10zingermansreuben() throws Exception {
+    public void candyReturnsCorrectItemPriceOf65Cents() throws Exception {
         Double expected = 0.65;
         Double actual = Main.chosenItemPrice("candy");
         assertEquals(expected, actual);
