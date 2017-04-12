@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ea54655b-08d5-4922-af05-d822d761095f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainTest.java" afterPath="$PROJECT_DIR$/src/MainTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Validator.java" afterPath="$PROJECT_DIR$/src/Validator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +34,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-587">
-              <caret line="66" column="8" lean-forward="false" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
+            <state relative-caret-position="367">
+              <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,8 +56,8 @@
       <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="146" column="45" lean-forward="false" selection-start-line="146" selection-start-column="45" selection-end-line="146" selection-end-column="45" />
+            <state relative-caret-position="671">
+              <caret line="162" column="5" lean-forward="true" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,8 +68,8 @@
       <file leaf-file-name="Validator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Validator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="38" column="92" lean-forward="false" selection-start-line="38" selection-start-column="92" selection-end-line="38" selection-end-column="92" />
+            <state relative-caret-position="349">
+              <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -154,8 +154,8 @@
         <option value="$PROJECT_DIR$/src/Test/MainTest.java" />
         <option value="$PROJECT_DIR$/src/Tests/MainTest.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Validator.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/MainTest.java" />
       </list>
     </option>
@@ -300,28 +300,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MainTest.didAnythingElseReturnErrorMessage">
-    <configuration default="false" name="MainTest.whenUserSelectsChipsItIsValidChoice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="pillar-kata-1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MainTest" />
-      <option name="METHOD_NAME" value="whenUserSelectsChipsItIsValidChoice" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.MainTest.didUserContinueEqualYesInMain">
     <configuration default="false" name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="pillar-kata-1" />
@@ -393,6 +372,27 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MainTest" />
       <option name="METHOD_NAME" value="didAnythingElseReturnErrorMessage" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="MainTest.didUserContinueEqualYesInMain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="pillar-kata-1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MainTest" />
+      <option name="METHOD_NAME" value="didUserContinueEqualYesInMain" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -805,19 +805,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.Unnamed" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.MainTest.whenUserSelectsChipsItIsValidChoice" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.MainTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.MainTest.didUserContinueEqualYesOrNo" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.MainTest.didUserContinueEqualNo" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.MainTest.didAnythingElseReturnErrorMessage" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.MainTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.MainTest.didUserContinueEqualYesOrNo" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.MainTest.didUserContinueEqualNo" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.MainTest.didAnythingElseReturnErrorMessage" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.MainTest.didUserContinueEqualYesInMain" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.MainTest.didAnythingElseReturnErrorMessage" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.MainTest.didUserContinueEqualNo" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.MainTest.didUserContinueEqualYesOrNo" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.MainTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.MainTest.whenUserSelectsChipsItIsValidChoice" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.MainTest.didUserContinueEqualYesInMain" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.MainTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.MainTest.didAnythingElseReturnErrorMessage" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.MainTest.didUserContinueEqualNo" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.MainTest.didUserContinueEqualYesOrNo" />
       </list>
     </recent_temporary>
   </component>
@@ -839,7 +839,7 @@
       <workItem from="1491228023667" duration="22000" />
       <workItem from="1491846907047" duration="2000" />
       <workItem from="1492019288913" duration="5354000" />
-      <workItem from="1492030954359" duration="2344000" />
+      <workItem from="1492030954359" duration="3765000" />
     </task>
     <task id="LOCAL-00001" summary="add basic getUserInput method, create simple testunit">
       <created>1489980682544</created>
@@ -862,6 +862,12 @@
     <history-entry file="MainTest - 2017.04.12 at 17h 44m 41s.xml">
       <configuration name="MainTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MainTest - 2017.04.12 at 18h 03m 49s.xml">
+      <configuration name="MainTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest - 2017.04.12 at 18h 14m 29s.xml">
+      <configuration name="MainTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="MainTest_didAnythingElseReturnErrorMessage - 2017.04.12 at 17h 51m 20s.xml">
       <configuration name="MainTest.didAnythingElseReturnErrorMessage" configurationId="JUnit" />
     </history-entry>
@@ -870,6 +876,9 @@
     </history-entry>
     <history-entry file="MainTest_didUserContinueEqualNo - 2017.04.12 at 17h 49m 58s.xml">
       <configuration name="MainTest.didUserContinueEqualNo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_didUserContinueEqualYesInMain - 2017.04.12 at 18h 17m 27s.xml">
+      <configuration name="MainTest.didUserContinueEqualYesInMain" configurationId="JUnit" />
     </history-entry>
     <history-entry file="MainTest_didUserContinueEqualYesOrNo - 2017.04.12 at 17h 48m 17s.xml">
       <configuration name="MainTest.didUserContinueEqualYesOrNo" configurationId="JUnit" />
@@ -880,18 +889,9 @@
     <history-entry file="MainTest_didUserContinueEqualYesOrNo - 2017.04.12 at 17h 48m 44s.xml">
       <configuration name="MainTest.didUserContinueEqualYesOrNo" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainTest_whenOreoIsSelectedValidatorReturnsInvalid - 2017.04.12 at 17h 40m 22s.xml">
-      <configuration name="MainTest.whenOreoIsSelectedValidatorReturnsInvalid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_whenUserSelectsChipsItIsValidChoice - 2017.04.12 at 17h 42m 04s.xml">
-      <configuration name="MainTest.whenUserSelectsChipsItIsValidChoice" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_whenUserSelectsChipsItIsValidChoice - 2017.04.12 at 17h 42m 14s.xml">
-      <configuration name="MainTest.whenUserSelectsChipsItIsValidChoice" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42891000" />
+    <option name="totallyTimeSpent" value="44312000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -917,7 +917,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35054946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14175825" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17802198" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -951,7 +951,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1265,8 +1265,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-587">
-          <caret line="66" column="8" lean-forward="false" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
+        <state relative-caret-position="367">
+          <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1275,16 +1275,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Validator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="38" column="92" lean-forward="false" selection-start-line="38" selection-start-column="92" selection-end-line="38" selection-end-column="92" />
+        <state relative-caret-position="349">
+          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="146" column="45" lean-forward="false" selection-start-line="146" selection-start-column="45" selection-end-line="146" selection-end-column="45" />
+        <state relative-caret-position="671">
+          <caret line="162" column="5" lean-forward="true" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

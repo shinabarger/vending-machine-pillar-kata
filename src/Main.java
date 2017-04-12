@@ -13,67 +13,51 @@ public class Main {
     public static void main(String args) {
 
         double total = 0;
-        String userInputCoin;
-        String totalAmount = "0.00";
-        double coinReturn = 0.00;
-        String answer = "";
-        double choicePriceDouble = 0.0;
+        double coinReturn;
 
+        String totalAmountInDollarFormat;
 
-            String userProductChoice = Validator.pickChipsColaOrCandy("TYPE COLA, CHIPS, or CANDY to SELECT");
+        String userProductChoice = Validator.pickChipsColaOrCandy("TYPE COLA, CHIPS, or CANDY to SELECT");
 
-            //get price of product
-            choicePriceDouble = chosenItemPrice(userProductChoice);
-            String choicePrice = String.format("%.2g%n", choicePriceDouble);
+        //get price of product
+        double priceOfTheUserChoice = chosenItemPrice(userProductChoice);
+        String priceOfTheUserChoiceInDollarAmount = String.format("%.2g%n", priceOfTheUserChoice);
+        String coinInsertedByUser = Validator.isValidCoin(args);
 
-            System.out.println(userProductChoice + " costs " + choicePrice + "\nTotal inserted is: " + totalAmount);
+        //add Coins to Total
+        total = addCoinsToTotal(coinInsertedByUser);
+        totalAmountInDollarFormat = String.format("%.2g%n", total);
+        System.out.println(userProductChoice + " costs " + priceOfTheUserChoiceInDollarAmount + "\nTotal inserted is: " + totalAmountInDollarFormat);
 
-            userInputCoin = Validator.isValidCoin(args);
+        String userContinueYesOrNo = Main.userWishesToContinueOrLeave("yes");
 
-            //add Coins to Total
-            total += addCoinsToTotal(userInputCoin);
-            totalAmount = String.format("%.2g%n", total);
-            System.out.println(userProductChoice + " costs " + choicePrice + "\nTotal inserted is: " + totalAmount);
+        if (userContinueYesOrNo.equalsIgnoreCase("n")) {
+            coinReturn = priceOfTheUserChoice;
+            String coinReturnTotal = String.format("%.2g%n", coinReturn);
+            System.out.println("Total coin return is: " + coinReturnTotal);
 
-            if (answer.equalsIgnoreCase("n")) {
-                coinReturn = choicePriceDouble;
-                choicePriceDouble = 0.0;
-                choicePrice = String.format("%.2g%n", choicePriceDouble);
-                String coinReturnTotal = String.format("%.2g%n", coinReturn);
-                System.out.println("Total coin return is: " + coinReturnTotal);
-            } else if (!answer.equalsIgnoreCase("n")) {
+        } else if (userContinueYesOrNo.equalsIgnoreCase("y")) {
+            coinReturn = (total - priceOfTheUserChoice);
+            totalAmountInDollarFormat = String.format("%.2g%n", coinReturn);
+            System.out.println("Your total is " + totalAmountInDollarFormat);
+            total = 0.00;
 
-                System.out.println("YOUR PRODUCT WAS DISPENSED \nTHANK YOU \n");
+        } else {
+            total = priceOfTheUserChoice - total;
 
-                System.out.println("Would you like your remaining coins returned? Type yes or no.");
-
-                if (answer.equalsIgnoreCase("y") | answer.equalsIgnoreCase("Yes")) {
-                    coinReturn = (total - choicePriceDouble);
-                    totalAmount = String.format("%.2g%n", coinReturn);
-                    total = 0.00;
-                    System.out.println("Don't forget your coins in coin return: " + totalAmount);
-                } else {
-                    total = choicePriceDouble - total;
-
-                    if (total < 0) {
-                        total = 0.0;
-                    }
-                    totalAmount = String.format("%.2g%n", total);
-                    System.out.println("Okay, you have " + totalAmount + " left to use.");
-                }
-
+            if (total < 0) {
+                total = 0.0;
             }
-
-        System.out.println("Goodbye.");
+            totalAmountInDollarFormat = String.format("%.2g%n", total);
+            System.out.println("Okay, you have " + totalAmountInDollarFormat + " left to use.");
+        }
 
     }
 
-    //getUserInput & assign to String userInput
     public static Double addCoinsToTotal(String coinInput) {
         NumberFormat formatter = new DecimalFormat("#0.00");
         Scanner scan = new Scanner(System.in);
 
-        //declare some variables
         double totalAmountInserted = 0.00;
         double coinReturnTotal = 0.00;
 
@@ -99,17 +83,12 @@ public class Main {
             case "cola":
                 priceOfItem += 1.00;
                 break;
-        }
-        switch (chosenItem.toLowerCase()) {
             case "chips":
                 priceOfItem += 0.50;
-
                 break;
-        }
-        switch (chosenItem.toLowerCase()) {
+
             case "candy":
                 priceOfItem += 0.65;
-
                 break;
         }
         return priceOfItem;
@@ -122,6 +101,13 @@ public class Main {
             coin = Double.toString(coinReturn);
         }
         return coin;
+
+    }
+
+    public static String userWishesToContinueOrLeave(String userChoiceToContinue) {
+        if (userChoiceToContinue.equalsIgnoreCase("yes")) {
+            return userChoiceToContinue;
+        } else return "invalid entry";
 
     }
 

@@ -155,6 +155,13 @@ public class MainTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void didUserContinueEqualYesInMain() throws Exception {
+        String expected = "yes";
+        String actual = Main.userWishesToContinueOrLeave("yes");
+        assertEquals(expected, actual);
+    }
+
 
 
 }
