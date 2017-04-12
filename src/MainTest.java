@@ -128,6 +128,11 @@ public class MainTest {
         String expected = "candy";
         String actual = Validator.pickChipsColaOrCandy("candy");
     }
+    @Test
+    public void whenOreoIsSelectedValidatorReturnsInvalid() throws Exception {
+        String expected = "invalid";
+        String actual = Validator.pickChipsColaOrCandy("oreo");
+    }
 
 
 
