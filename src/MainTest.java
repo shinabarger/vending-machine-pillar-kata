@@ -123,6 +123,12 @@ public class MainTest {
         String actual = Validator.pickChipsColaOrCandy("cola");
     }
 
+    @Test
+    public void whenCandyIsSelectedItIsAValidChoice() throws Exception {
+        String expected = "candy";
+        String actual = Validator.pickChipsColaOrCandy("candy");
+    }
+
 
 
 
