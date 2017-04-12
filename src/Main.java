@@ -10,9 +10,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-
+    public static void main(String args) {
 
         double total = 0;
         String userInputCoin;
@@ -21,7 +19,7 @@ public class Main {
         String answer = "";
         double choicePriceDouble = 0.0;
 
-        do {
+
             String userProductChoice = Validator.pickChipsColaOrCandy("TYPE COLA, CHIPS, or CANDY to SELECT");
 
             //get price of product
@@ -30,24 +28,12 @@ public class Main {
 
             System.out.println(userProductChoice + " costs " + choicePrice + "\nTotal inserted is: " + totalAmount);
 
-            do {
-                //validate if it is a coin
-                System.out.println("INSERT COIN");
-                String userInput = scan.next();
-                userInputCoin = Validator.isValidCoin(userInput);
+            userInputCoin = Validator.isValidCoin(args);
 
-                //add Coins to Total
-                total += addCoinsToTotal(userInputCoin);
-                totalAmount = String.format("%.2g%n", total);
-                System.out.println(userProductChoice + " costs " + choicePrice + "\nTotal inserted is: " + totalAmount);
-
-            } while (choicePriceDouble > total);
-
-            //ask user if they want to purchase or cancel the order before it processes
-
-            System.out.println("Press N to cancel order completely, anything else to continue.");
-            answer = scan.nextLine();
-            answer = scan.nextLine();
+            //add Coins to Total
+            total += addCoinsToTotal(userInputCoin);
+            totalAmount = String.format("%.2g%n", total);
+            System.out.println(userProductChoice + " costs " + choicePrice + "\nTotal inserted is: " + totalAmount);
 
             if (answer.equalsIgnoreCase("n")) {
                 coinReturn = choicePriceDouble;
@@ -60,7 +46,6 @@ public class Main {
                 System.out.println("YOUR PRODUCT WAS DISPENSED \nTHANK YOU \n");
 
                 System.out.println("Would you like your remaining coins returned? Type yes or no.");
-                answer = scan.nextLine();
 
                 if (answer.equalsIgnoreCase("y") | answer.equalsIgnoreCase("Yes")) {
                     coinReturn = (total - choicePriceDouble);
@@ -78,10 +63,6 @@ public class Main {
                 }
 
             }
-
-            System.out.println("Would you like to purchase something else? #2");
-            answer = scan.nextLine();
-        } while (answer.equalsIgnoreCase("Y") | answer.equalsIgnoreCase("yes"));
 
         System.out.println("Goodbye.");
 
@@ -146,4 +127,3 @@ public class Main {
 
 }
 
-//TODO
