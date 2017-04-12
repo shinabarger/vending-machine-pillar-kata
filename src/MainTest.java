@@ -135,9 +135,16 @@ public class MainTest {
     }
 
     @Test
-    public void didUserContinueEqualYesOrNo() throws Exception {
+    public void didUserContinueEqualYes() throws Exception {
         String expected = "y";
         String actual = Validator.yesOrNo("y");
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void didUserContinueEqualNo() throws Exception {
+        String expected = "n";
+        String actual = Validator.yesOrNo("n");
         assertEquals(expected, actual);
     }
 
