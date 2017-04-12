@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Validator {
 
-    public static String isValidCoin(Scanner sc, String itemInsertedIntoSlot) {
+    public static String isValidCoin(String itemInsertedIntoSlot) {
         double coinReturn = 0.00;
         String validatingMessage = "";
             if (itemInsertedIntoSlot.equalsIgnoreCase("penny")) {

@@ -1,7 +1,5 @@
 import org.junit.Test;
 
-import java.util.Scanner;
-
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -14,9 +12,8 @@ public class MainTest {
     @Test
     //returns a string from validator to see if it is a coin
     public void quarterReturnsQuarter() throws Exception {
-        Scanner scan = new Scanner(System.in);
         String expected = "quarter";
-        String actual = Validator.isValidCoin(scan, "quarter");
+        String actual = Validator.isValidCoin( "quarter");
         assertEquals(expected, actual);
 
 
@@ -25,10 +22,8 @@ public class MainTest {
     @Test
     //returns a string from validator to see if it is a coin
     public void pennyReturnsErrorMessageInValidator() throws Exception {
-        //TODO make these tests work even with the scanning built into the validation
-        Scanner scan = new Scanner(System.in);
         String expected = "NO PENNIES. INSERT COIN.";
-        String actual = Validator.isValidCoin(scan, "penny");
+        String actual = Validator.isValidCoin( "penny");
         assertEquals(expected, actual);
 
 
@@ -36,27 +31,24 @@ public class MainTest {
 
     @Test
     public void aNonCurrencyItemReturnsErrorMessageInValidator() throws Exception {
-        Scanner scan = new Scanner(System.in);
         String expected = "That wasn't a coin. INSERT COIN";
-        String actual = Validator.isValidCoin(scan,"shoelace");
+        String actual = Validator.isValidCoin("shoelace");
         assertEquals(expected, actual);
 
     }
 
     @Test
     public void dimeReturnsDimeInValidator() throws Exception {
-        Scanner scan = new Scanner(System.in);
         String expected = "dime";
-        String actual = Validator.isValidCoin(scan, "dime");
+        String actual = Validator.isValidCoin("dime");
         assertEquals(expected, actual);
 
     }
 
     @Test
     public void nickelReturnsNickelInValidator() throws Exception {
-        Scanner scan = new Scanner(System.in);
         String expected = "nickel";
-        String actual = Validator.isValidCoin(scan,"nickel");
+        String actual = Validator.isValidCoin("nickel");
         assertEquals(expected, actual);
 
     }
@@ -64,7 +56,6 @@ public class MainTest {
 
     @Test
     public void pennyAddsNothingToInsertedCoinTotal() throws Exception {
-        Scanner scan = new Scanner(System.in);
         Double expected = 0.00;
         Double actual = Main.addCoinsToTotal("penny");
         assertEquals(expected, actual);
@@ -90,7 +81,6 @@ public class MainTest {
 
     @Test
     public void quarterAdds25CentsToInsertedCoinTotal() throws Exception {
-        Scanner scan = new Scanner(System.in);
         Double expected = 0.25;
         Double actual = Main.addCoinsToTotal( "quarter");
         assertEquals(expected, actual);

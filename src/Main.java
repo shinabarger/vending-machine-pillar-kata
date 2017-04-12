@@ -41,7 +41,7 @@ public class Main {
                 //validate if it is a coin
                 System.out.println("INSERT COIN");
                 String userInput = scan.next();
-                userInputCoin = Validator.isValidCoin(scan, userInput);
+                userInputCoin = Validator.isValidCoin(userInput);
 
                 //add Coins to Total
                 total += addCoinsToTotal(userInputCoin);
