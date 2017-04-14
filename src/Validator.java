@@ -24,7 +24,8 @@ public class Validator {
         return validatingMessage;
     }
 
-    public static String pickChipsColaOrCandy(String userChoice) {
+    public static String pickChipsColaOrCandy(String userChoice, String prompt) {
+        System.out.println(prompt);
 
         if (userChoice.equalsIgnoreCase("chips")
                 | userChoice.equalsIgnoreCase("cola")

@@ -44,7 +44,7 @@ public class Main {
     }
 
     public static String getProductChoiceFromUser(String productChoice) {
-        Validator.pickChipsColaOrCandy("TYPE COLA, CHIPS, or CANDY to SELECT");
+        productChoice = Validator.pickChipsColaOrCandy(productChoice,"TYPE COLA, CHIPS, or CANDY to SELECT");
         return productChoice;
     }
 

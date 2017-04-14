@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea54655b-08d5-4922-af05-d822d761095f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainTest.java" afterPath="$PROJECT_DIR$/src/MainTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Validator.java" afterPath="$PROJECT_DIR$/src/Validator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +34,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="954">
-              <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,8 +56,8 @@
       <file leaf-file-name="Validator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Validator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+            <state relative-caret-position="450">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -66,8 +66,8 @@
       <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="181" column="62" lean-forward="false" selection-start-line="181" selection-start-column="62" selection-end-line="181" selection-end-column="62" />
+            <state relative-caret-position="3384">
+              <caret line="188" column="60" lean-forward="false" selection-start-line="188" selection-start-column="60" selection-end-line="188" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -155,8 +155,8 @@
         <option value="$PROJECT_DIR$/src/Tests/MainTest.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/Validator.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/MainTest.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -278,7 +278,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MainTest.getColaWhenUserInputCola">
+  <component name="RunManager" selected="JUnit.MainTest">
     <configuration default="false" name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="pillar-kata-1" />
@@ -288,27 +288,6 @@
       <option name="MAIN_CLASS_NAME" value="MainTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="MainTest.didUserContinueEqualYesInMain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="pillar-kata-1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MainTest" />
-      <option name="METHOD_NAME" value="didUserContinueEqualYesInMain" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -371,6 +350,27 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MainTest" />
       <option name="METHOD_NAME" value="getColaWhenUserInputCola" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="MainTest.getInvalidMessageWhenUserSelectsOrea" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="pillar-kata-1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MainTest" />
+      <option name="METHOD_NAME" value="getInvalidMessageWhenUserSelectsOrea" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -784,18 +784,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.Unnamed" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.MainTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.MainTest.didUserContinueEqualYesInMain" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.MainTest.userSaidNoToCancelProductReturnedNo" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.MainTest.whenUserCancelsOrderAddsDollarToCoinReturn" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.MainTest.getColaWhenUserInputCola" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.MainTest.userSaidNoToCancelProductReturnedNo" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.MainTest.whenUserCancelsOrderAddsDollarToCoinReturn" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.MainTest.getColaWhenUserInputCola" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.MainTest.getInvalidMessageWhenUserSelectsOrea" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.MainTest.getColaWhenUserInputCola" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.MainTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.MainTest.whenUserCancelsOrderAddsDollarToCoinReturn" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.MainTest.userSaidNoToCancelProductReturnedNo" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.MainTest.didUserContinueEqualYesInMain" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.MainTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.MainTest.getColaWhenUserInputCola" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.MainTest.getInvalidMessageWhenUserSelectsOrea" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.MainTest.whenUserCancelsOrderAddsDollarToCoinReturn" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.MainTest.userSaidNoToCancelProductReturnedNo" />
       </list>
     </recent_temporary>
   </component>
@@ -818,7 +818,7 @@
       <workItem from="1491846907047" duration="2000" />
       <workItem from="1492019288913" duration="5354000" />
       <workItem from="1492030954359" duration="3836000" />
-      <workItem from="1492177181367" duration="3551000" />
+      <workItem from="1492177181367" duration="4009000" />
     </task>
     <task id="LOCAL-00001" summary="add basic getUserInput method, create simple testunit">
       <created>1489980682544</created>
@@ -838,39 +838,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MainTest - 2017.04.14 at 09h 49m 26s.xml">
+    <history-entry file="MainTest - 2017.04.14 at 14h 09m 04s.xml">
       <configuration name="MainTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainTest - 2017.04.14 at 09h 55m 49s.xml">
-      <configuration name="MainTest" configurationId="JUnit" />
+    <history-entry file="MainTest_getColaWhenUserInputCola - 2017.04.14 at 14h 07m 26s.xml">
+      <configuration name="MainTest.getColaWhenUserInputCola" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainTest - 2017.04.14 at 13h 54m 46s.xml">
-      <configuration name="MainTest" configurationId="JUnit" />
+    <history-entry file="MainTest_getColaWhenUserInputCola - 2017.04.14 at 14h 09m 29s.xml">
+      <configuration name="MainTest.getColaWhenUserInputCola" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainTest_didUserContinueEqualYesInMain - 2017.04.14 at 09h 50m 57s.xml">
-      <configuration name="MainTest.didUserContinueEqualYesInMain" configurationId="JUnit" />
+    <history-entry file="MainTest_getColaWhenUserInputCola - 2017.04.14 at 14h 10m 10s.xml">
+      <configuration name="MainTest.getColaWhenUserInputCola" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainTest_didUserContinueEqualYesOrNo - 2017.04.12 at 17h 48m 44s.xml">
-      <configuration name="MainTest.didUserContinueEqualYesOrNo" configurationId="JUnit" />
+    <history-entry file="MainTest_getInvalidMessageWhenUserSelectsOrea - 2017.04.14 at 14h 07m 02s.xml">
+      <configuration name="MainTest.getInvalidMessageWhenUserSelectsOrea" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainTest_userSaidNoToCancelProductReturnedNo - 2017.04.14 at 09h 51m 58s.xml">
-      <configuration name="MainTest.userSaidNoToCancelProductReturnedNo" configurationId="JUnit" />
+    <history-entry file="MainTest_getInvalidMessageWhenUserSelectsOrea - 2017.04.14 at 14h 07m 24s.xml">
+      <configuration name="MainTest.getInvalidMessageWhenUserSelectsOrea" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainTest_whenUserCancelsOrderAddsDollarToCoinReturn - 2017.04.14 at 10h 02m 33s.xml">
-      <configuration name="MainTest.whenUserCancelsOrderAddsDollarToCoinReturn" configurationId="JUnit" />
+    <history-entry file="MainTest_getInvalidMessageWhenUserSelectsOrea - 2017.04.14 at 14h 09m 13s.xml">
+      <configuration name="MainTest.getInvalidMessageWhenUserSelectsOrea" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainTest_whenUserCancelsOrderAddsDollarToCoinReturn - 2017.04.14 at 10h 02m 49s.xml">
-      <configuration name="MainTest.whenUserCancelsOrderAddsDollarToCoinReturn" configurationId="JUnit" />
+    <history-entry file="MainTest_getInvalidMessageWhenUserSelectsOrea - 2017.04.14 at 14h 09m 31s.xml">
+      <configuration name="MainTest.getInvalidMessageWhenUserSelectsOrea" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainTest_whenUserCancelsOrderAddsDollarToCoinReturn - 2017.04.14 at 10h 03m 06s.xml">
-      <configuration name="MainTest.whenUserCancelsOrderAddsDollarToCoinReturn" configurationId="JUnit" />
+    <history-entry file="MainTest_getInvalidMessageWhenUserSelectsOrea - 2017.04.14 at 14h 09m 36s.xml">
+      <configuration name="MainTest.getInvalidMessageWhenUserSelectsOrea" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainTest_whenUserCancelsOrderAddsDollarToCoinReturn - 2017.04.14 at 13h 51m 43s.xml">
-      <configuration name="MainTest.whenUserCancelsOrderAddsDollarToCoinReturn" configurationId="JUnit" />
+    <history-entry file="MainTest_getInvalidMessageWhenUserSelectsOrea - 2017.04.14 at 14h 10m 07s.xml">
+      <configuration name="MainTest.getInvalidMessageWhenUserSelectsOrea" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47934000" />
+    <option name="totallyTimeSpent" value="48392000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1258,16 +1258,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Validator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="450">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="954">
-          <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1276,8 +1276,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="181" column="62" lean-forward="false" selection-start-line="181" selection-start-column="62" selection-end-line="181" selection-end-column="62" />
+        <state relative-caret-position="3384">
+          <caret line="188" column="60" lean-forward="false" selection-start-line="188" selection-start-column="60" selection-end-line="188" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
