@@ -85,7 +85,7 @@ public class MainTest {
     @Test
     public void colaReturnsCorrectItemPriceOf1Dollar() throws Exception {
         Double expected = 1.00;
-        Double actual = Main.chosenItemPrice("cola");
+        Double actual = Main.getChosenItemPrice("cola");
         assertEquals(expected, actual);
 
     }
@@ -93,7 +93,7 @@ public class MainTest {
     @Test
     public void chipsReturnsCorrectItemPriceOf50cents() throws Exception {
         Double expected = 0.5;
-        Double actual = Main.chosenItemPrice("chips");
+        Double actual = Main.getChosenItemPrice("chips");
         assertEquals(expected, actual);
 
     }
@@ -101,20 +101,20 @@ public class MainTest {
     @Test
     public void candyReturnsCorrectItemPriceOf65Cents() throws Exception {
         Double expected = 0.65;
-        Double actual = Main.chosenItemPrice("candy");
+        Double actual = Main.getChosenItemPrice("candy");
         assertEquals(expected, actual);
 
     }
 
     @Test
-    public void whenUserSelectsChipsItIsValidChoice() throws Exception {
+    public void whenUserSelectsChipsItValidatesCorrectlyToChips() throws Exception {
         String expected = "chips";
         String actual = Validator.pickChipsColaOrCandy("chips");
         assertEquals(expected, actual);
     }
 
     @Test
-    public void whenUserSelectsColaItIsAValidChoice() throws Exception {
+    public void whenUserSelectsColaValidatorValidatesAndReturnsCola() throws Exception {
         String expected = "cola";
         String actual = Validator.pickChipsColaOrCandy("cola");
         assertEquals(expected, actual);
@@ -174,6 +174,13 @@ public class MainTest {
         double expected = 0.0;
         double actual = Main.addAllUserInputtedCoinsToCoinReturn(0.0);
         assertEquals(expected, actual, 0.0);
+    }
+
+    @Test
+    public void getColaWhenUserInputCola() throws Exception {
+       String expected = "cola";
+        String actual = Main.getProductChoiceFromUser("cola");
+        assertEquals(expected, actual);
     }
 
 

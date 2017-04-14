@@ -1,6 +1,5 @@
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-import java.util.Scanner;
 
 /**
  * Created by David Shinabarger March 2017
@@ -12,31 +11,23 @@ public class Main {
 
     public static void main(String args) {
 
-        double total = 0;
-        double coinReturn;
+        String userProductChoice = getProductChoiceFromUser("Cola");
 
-        String totalAmountInDollarFormat;
+        double priceOfTheUserChoice = getChosenItemPrice(userProductChoice);
 
-        String userProductChoice = Validator.pickChipsColaOrCandy("TYPE COLA, CHIPS, or CANDY to SELECT");
-
-        //get price of product
-        double priceOfTheUserChoice = chosenItemPrice(userProductChoice);
-        String priceOfTheUserChoiceInDollarAmount = String.format("%.2g%n", priceOfTheUserChoice);
         String coinInsertedByUser = Validator.isValidCoin(args);
 
         //add Coins to Total
-        total = addCoinsToTotal(coinInsertedByUser);
-        totalAmountInDollarFormat = String.format("%.2g%n", total);
-        System.out.println(userProductChoice + " costs " + priceOfTheUserChoiceInDollarAmount + "\nTotal inserted is: " + totalAmountInDollarFormat);
+        double total = addCoinsToTotal(coinInsertedByUser);
 
         String userContinueYesOrNo = Main.userWishesToContinueOrLeave("yes");
 
         if (userContinueYesOrNo.equalsIgnoreCase("no")) {
-            coinReturn = addAllUserInputtedCoinsToCoinReturn(priceOfTheUserChoice);
+            addAllUserInputtedCoinsToCoinReturn(priceOfTheUserChoice);
 
         } else if (userContinueYesOrNo.equalsIgnoreCase("yes")) {
-            coinReturn = (total - priceOfTheUserChoice);
-            totalAmountInDollarFormat = String.format("%.2g%n", coinReturn);
+            double coinReturn = (total - priceOfTheUserChoice);
+            String totalAmountInDollarFormat = String.format("%.2g%n", coinReturn);
             System.out.println("Your total is " + totalAmountInDollarFormat);
             total = 0.00;
 
@@ -46,35 +37,35 @@ public class Main {
             if (total < 0) {
                 total = 0.0;
             }
-            totalAmountInDollarFormat = String.format("%.2g%n", total);
+            String totalAmountInDollarFormat = String.format("%.2g%n", total);
             System.out.println("Okay, you have " + totalAmountInDollarFormat + " left to use.");
         }
 
     }
 
-    public static Double addCoinsToTotal(String coinInput) {
-        NumberFormat formatter = new DecimalFormat("#0.00");
-        Scanner scan = new Scanner(System.in);
+    public static String getProductChoiceFromUser(String productChoice) {
+        Validator.pickChipsColaOrCandy("TYPE COLA, CHIPS, or CANDY to SELECT");
+        return productChoice;
+    }
 
+    public static Double addCoinsToTotal(String coinInput) {
+        NumberFormat formatToTwoDecimalPlaces = new DecimalFormat("#0.00");
         double totalAmountInserted = 0.00;
-        double coinReturnTotal = 0.00;
 
         if (coinInput.equals("dime")) {
-
             totalAmountInserted += 0.10;
-            coinInput = String.format("%.2g%n", totalAmountInserted);
 
         } else if (coinInput.equals("nickel")) {
             totalAmountInserted += 0.05;
-        } else if (coinInput.equals("quarter")) {
 
+        } else if (coinInput.equals("quarter")) {
             totalAmountInserted += 0.25;
         }
-        formatter.format(totalAmountInserted);
+        formatToTwoDecimalPlaces.format(totalAmountInserted);
         return totalAmountInserted;
     }
 
-    public static Double chosenItemPrice(String chosenItem) {
+    public static Double getChosenItemPrice(String chosenItem) {
         double priceOfItem = 0.0;
 
         switch (chosenItem.toLowerCase()) {
