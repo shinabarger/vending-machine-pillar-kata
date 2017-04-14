@@ -162,6 +162,20 @@ public class MainTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void userSaidNoToCancelProductReturnedNo() throws Exception {
+        String expected = "no";
+        String actual = Main.userWishesToContinueOrLeave("no");
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void whenUserCancelsOrderAddsDollarToCoinReturn() throws Exception {
+        double expected = 0.0;
+        double actual = Main.addAllUserInputtedCoinsToCoinReturn(0.0);
+        assertEquals(expected, actual, 0.0);
+    }
+
 
 
 }

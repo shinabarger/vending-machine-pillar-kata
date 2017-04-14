@@ -31,12 +31,10 @@ public class Main {
 
         String userContinueYesOrNo = Main.userWishesToContinueOrLeave("yes");
 
-        if (userContinueYesOrNo.equalsIgnoreCase("n")) {
-            coinReturn = priceOfTheUserChoice;
-            String coinReturnTotal = String.format("%.2g%n", coinReturn);
-            System.out.println("Total coin return is: " + coinReturnTotal);
+        if (userContinueYesOrNo.equalsIgnoreCase("no")) {
+            coinReturn = addAllUserInputtedCoinsToCoinReturn(priceOfTheUserChoice);
 
-        } else if (userContinueYesOrNo.equalsIgnoreCase("y")) {
+        } else if (userContinueYesOrNo.equalsIgnoreCase("yes")) {
             coinReturn = (total - priceOfTheUserChoice);
             totalAmountInDollarFormat = String.format("%.2g%n", coinReturn);
             System.out.println("Your total is " + totalAmountInDollarFormat);
@@ -105,10 +103,19 @@ public class Main {
     }
 
     public static String userWishesToContinueOrLeave(String userChoiceToContinue) {
-        if (userChoiceToContinue.equalsIgnoreCase("yes")) {
-            return userChoiceToContinue;
-        } else return "invalid entry";
 
+        userChoiceToContinue = Validator.yesOrNo(userChoiceToContinue);
+
+        return userChoiceToContinue;
+
+    }
+
+    public static double addAllUserInputtedCoinsToCoinReturn(double userTotal) {
+        String coinReturnTotal = String.format("%.2g%n", userTotal);
+        System.out.println("Total coin return is: " + coinReturnTotal);
+        userTotal = 0.0;
+
+        return userTotal;
     }
 
 }
