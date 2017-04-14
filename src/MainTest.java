@@ -158,14 +158,14 @@ public class MainTest {
     @Test
     public void didUserContinueEqualYesInMain() throws Exception {
         String expected = "yes";
-        String actual = Main.userWishesToContinueOrLeave("yes");
+        String actual = Main.userWishesToContinueOrLeave("yes", 0, 0);
         assertEquals(expected, actual);
     }
 
     @Test
     public void userSaidNoToCancelProductReturnedNo() throws Exception {
         String expected = "no";
-        String actual = Main.userWishesToContinueOrLeave("no");
+        String actual = Main.userWishesToContinueOrLeave("no", 0 ,0);
         assertEquals(expected, actual);
     }
 

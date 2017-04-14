@@ -11,35 +11,20 @@ public class Main {
 
     public static void main(String args) {
 
-        String userProductChoice = getProductChoiceFromUser("Cola");
+        String userProductChoice;
+        double priceOfTheUserChoice;
+        String coinInsertedByUser;
+        double coinTotal;
 
-        double priceOfTheUserChoice = getChosenItemPrice(userProductChoice);
+        userProductChoice = getProductChoiceFromUser("Cola");
 
-        String coinInsertedByUser = Validator.isValidCoin(args);
+        priceOfTheUserChoice = getChosenItemPrice(userProductChoice);
 
-        //add Coins to Total
-        double total = addCoinsToTotal(coinInsertedByUser);
+        coinInsertedByUser = Validator.isValidCoin(args);
 
-        String userContinueYesOrNo = Main.userWishesToContinueOrLeave("yes");
+        coinTotal = addCoinsToTotal(coinInsertedByUser);
 
-        if (userContinueYesOrNo.equalsIgnoreCase("no")) {
-            addAllUserInputtedCoinsToCoinReturn(priceOfTheUserChoice);
-
-        } else if (userContinueYesOrNo.equalsIgnoreCase("yes")) {
-            double coinReturn = (total - priceOfTheUserChoice);
-            String totalAmountInDollarFormat = String.format("%.2g%n", coinReturn);
-            System.out.println("Your total is " + totalAmountInDollarFormat);
-            total = 0.00;
-
-        } else {
-            total = priceOfTheUserChoice - total;
-
-            if (total < 0) {
-                total = 0.0;
-            }
-            String totalAmountInDollarFormat = String.format("%.2g%n", total);
-            System.out.println("Okay, you have " + totalAmountInDollarFormat + " left to use.");
-        }
+        String userContinueYesOrNo = Main.userWishesToContinueOrLeave("yes", coinTotal, priceOfTheUserChoice);
 
     }
 
@@ -93,9 +78,18 @@ public class Main {
 
     }
 
-    public static String userWishesToContinueOrLeave(String userChoiceToContinue) {
+    public static String userWishesToContinueOrLeave(String userChoiceToContinue, double coinTotal, double priceOfTheUserChoice) {
 
         userChoiceToContinue = Validator.yesOrNo(userChoiceToContinue);
+
+        if (userChoiceToContinue.equalsIgnoreCase("no")) {
+            addAllUserInputtedCoinsToCoinReturn(priceOfTheUserChoice);
+
+        } else if (userChoiceToContinue.equalsIgnoreCase("yes")) {
+            double coinReturn = giveChangeBackToUser(coinTotal, priceOfTheUserChoice);
+            String totalAmountInDollarFormat = String.format("%.2g%n", coinTotal);
+            System.out.println("Okay, you have " + totalAmountInDollarFormat + " left to use.");
+        }
 
         return userChoiceToContinue;
 
@@ -107,6 +101,14 @@ public class Main {
         userTotal = 0.0;
 
         return userTotal;
+    }
+
+    public static double giveChangeBackToUser(double totalCoinsInserted, double itemPriceTotal) {
+        double changeToGive = totalCoinsInserted - itemPriceTotal;
+        String totalAmountInDollarFormat = String.format("%.2g%n", changeToGive);
+        System.out.println("Your coinTotal is " + totalAmountInDollarFormat);
+
+        return changeToGive;
     }
 
 }
