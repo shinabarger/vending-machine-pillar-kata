@@ -1,4 +1,4 @@
-//Validators for entire program
+package main;//Validators for entire program
 
 public class Validator {
 

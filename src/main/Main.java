@@ -1,3 +1,5 @@
+package main;
+
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
@@ -50,7 +52,7 @@ public class Main {
         return totalAmountInserted;
     }
 
-    static Double getChosenItemPrice(String chosenItem) {
+    public static Double getChosenItemPrice(String chosenItem) {
         double priceOfItem = 0.0;
 
         switch (chosenItem.toLowerCase()) {
@@ -78,7 +80,7 @@ public class Main {
 
     }
 
-    static String userWishesToContinueOrLeave(String userChoiceToContinue, double coinTotal, double priceOfTheUserChoice) {
+    public static String userWishesToContinueOrLeave(String userChoiceToContinue, double coinTotal, double priceOfTheUserChoice) {
 
         userChoiceToContinue = Validator.yesOrNo(userChoiceToContinue);
 
@@ -95,7 +97,7 @@ public class Main {
 
     }
 
-    static double addAllUserInputtedCoinsToCoinReturn(double userTotal) {
+    public static double addAllUserInputtedCoinsToCoinReturn(double userTotal) {
         String coinReturnTotal = String.format("%.2g%n", userTotal);
         System.out.println("Total coin return is: " + coinReturnTotal);
         userTotal = 0.0;

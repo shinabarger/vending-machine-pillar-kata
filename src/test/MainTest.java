@@ -1,3 +1,7 @@
+package test;
+
+import main.Main;
+import main.Validator;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
