@@ -1,7 +1,6 @@
 package test.java;
 
-import main.java.Main;
-import main.java.Validator;
+import main.java.*;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -57,7 +56,7 @@ public class MainTest {
     @Test
     public void pennyAddsNothingToInsertedCoinTotal() throws Exception {
         Double expected = 0.00;
-        Double actual = Main.addCoinsToTotal("penny");
+        Double actual = AddCoins.addCoinsToTotal("penny");
         assertEquals(expected, actual);
 
     }
@@ -65,7 +64,7 @@ public class MainTest {
     @Test
     public void nickelAddsFiveCentsToInsertedCoinTotal() throws Exception {
         Double expected = 0.05;
-        Double actual = Main.addCoinsToTotal("nickel");
+        Double actual = AddCoins.addCoinsToTotal("nickel");
         assertEquals(expected, actual);
 
     }
@@ -73,7 +72,7 @@ public class MainTest {
     @Test
     public void dimeAddsTenCentsToInsertedCoinTotal() throws Exception {
         Double expected = 0.10;
-        Double actual = Main.addCoinsToTotal("dime");
+        Double actual = AddCoins.addCoinsToTotal("dime");
         assertEquals(expected, actual);
 
     }
@@ -81,7 +80,7 @@ public class MainTest {
     @Test
     public void quarterAdds25CentsToInsertedCoinTotal() throws Exception {
         Double expected = 0.25;
-        Double actual = Main.addCoinsToTotal("quarter");
+        Double actual = AddCoins.addCoinsToTotal("quarter");
         assertEquals(expected, actual);
 
     }
@@ -89,7 +88,7 @@ public class MainTest {
     @Test
     public void colaReturnsCorrectItemPriceOf1Dollar() throws Exception {
         Double expected = 1.00;
-        Double actual = Main.getChosenItemPrice("cola");
+        Double actual = GetPrice.getChosenItemPrice("cola");
         assertEquals(expected, actual);
 
     }
@@ -97,7 +96,7 @@ public class MainTest {
     @Test
     public void chipsReturnsCorrectItemPriceOf50cents() throws Exception {
         Double expected = 0.5;
-        Double actual = Main.getChosenItemPrice("chips");
+        Double actual = GetPrice.getChosenItemPrice("chips");
         assertEquals(expected, actual);
 
     }
@@ -105,7 +104,7 @@ public class MainTest {
     @Test
     public void candyReturnsCorrectItemPriceOf65Cents() throws Exception {
         Double expected = 0.65;
-        Double actual = Main.getChosenItemPrice("candy");
+        Double actual = GetPrice.getChosenItemPrice("candy");
         assertEquals(expected, actual);
 
     }
@@ -162,38 +161,36 @@ public class MainTest {
     @Test
     public void didUserContinueEqualYesInMain() throws Exception {
         String expected = "yes";
-        String actual = Main.userWishesToContinueOrLeave("yes", 0, 0);
+        String actual = ContinueYesOrNo.userWishesToContinueOrLeave("yes", 0, 0);
         assertEquals(expected, actual);
     }
 
     @Test
     public void userSaidNoToCancelProductReturnedNo() throws Exception {
         String expected = "no";
-        String actual = Main.userWishesToContinueOrLeave("no", 0 ,0);
+        String actual = ContinueYesOrNo.userWishesToContinueOrLeave("no", 0, 0);
         assertEquals(expected, actual);
     }
 
     @Test
     public void whenUserCancelsOrderAddsDollarToCoinReturn() throws Exception {
         double expected = 0.0;
-        double actual = Main.addAllUserInputtedCoinsToCoinReturn(0.0);
+        double actual = CoinReturn.addAllUserInputtedCoinsToCoinReturn(0.0);
         assertEquals(expected, actual, 0.0);
     }
 
     @Test
     public void getColaWhenUserInputCola() throws Exception {
-       String expected = "cola";
-        String actual = Main.getProductChoiceFromUser("cola");
+        String expected = "cola";
+        String actual = GetProductChoice.getProductChoiceFromUser("cola");
         assertEquals(expected, actual);
     }
 
     @Test
     public void getInvalidMessageWhenUserSelectsOrea() throws Exception {
         String expected = "invalid";
-        String actual = Main.getProductChoiceFromUser("oreo");
+        String actual = GetProductChoice.getProductChoiceFromUser("oreo");
         assertEquals(expected, actual);
     }
-
-
 
 }

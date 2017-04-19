@@ -1,20 +1,14 @@
-THIS WAS CREATED BY DAVID SHINABARGER FOR A PILLAR KATA APPRENTICESHIP POSITION
+This was created by David Shinabarger. 
 
-I'm going to be honest -- I've never run tests from the command line. But you should be able to open and view all test units. I used Intellij to complete this project, which is free and should be pretty easy to implement. The base project that I made only has the three classes for now -- Validation Class, the Testing Class, and the Main class. 
-
-I'm going to keep reformatting this to make it more simple and easy to read, but this is a good start. 
+To run this from the command line, please view the RUNME_INSTRUCTIONS page. 
 
 Thank you.
 
 David
 
 
-
-
-
-
-
-INSTRUCTIONS: 
+INSTRUCTIONS & REQUIREMENTS OF THE KATA
+_______________________________________
 
 Vending Machine Kata
 In this exercise you will build the brains of a vending machine. It will accept money, make change, maintain inventory, and dispense products. All the things that you might expect a vending machine to accomplish.
