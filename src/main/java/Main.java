@@ -1,4 +1,4 @@
-package main;
+package main.java;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -31,7 +31,7 @@ public class Main {
     }
 
     public static String getProductChoiceFromUser(String productChoice) {
-        productChoice = Validator.pickChipsColaOrCandy(productChoice,"TYPE COLA, CHIPS, or CANDY to SELECT");
+        productChoice = Validator.pickChipsColaOrCandy(productChoice, "TYPE COLA, CHIPS, or CANDY to SELECT");
         return productChoice;
     }
 
@@ -107,7 +107,7 @@ public class Main {
 
     private static double giveChangeBackToUser(double totalCoinsInserted, double itemPriceTotal) {
         double changeToGive = totalCoinsInserted - itemPriceTotal;
-        if(changeToGive<0){
+        if (changeToGive < 0) {
             changeToGive = 0;
         }
         String totalAmountInDollarFormat = String.format("%.2g%n", changeToGive);
@@ -118,4 +118,8 @@ public class Main {
     }
 
 }
+
+
+
+
 

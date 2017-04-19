@@ -1,4 +1,4 @@
-package main;//Validators for entire program
+package main.java;
 
 public class Validator {
 
@@ -44,6 +44,3 @@ public class Validator {
     }
 
 }
-
-
-
