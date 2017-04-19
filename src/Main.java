@@ -50,7 +50,7 @@ public class Main {
         return totalAmountInserted;
     }
 
-    public static Double getChosenItemPrice(String chosenItem) {
+    static Double getChosenItemPrice(String chosenItem) {
         double priceOfItem = 0.0;
 
         switch (chosenItem.toLowerCase()) {
@@ -78,7 +78,7 @@ public class Main {
 
     }
 
-    public static String userWishesToContinueOrLeave(String userChoiceToContinue, double coinTotal, double priceOfTheUserChoice) {
+    static String userWishesToContinueOrLeave(String userChoiceToContinue, double coinTotal, double priceOfTheUserChoice) {
 
         userChoiceToContinue = Validator.yesOrNo(userChoiceToContinue);
 
@@ -95,7 +95,7 @@ public class Main {
 
     }
 
-    public static double addAllUserInputtedCoinsToCoinReturn(double userTotal) {
+    static double addAllUserInputtedCoinsToCoinReturn(double userTotal) {
         String coinReturnTotal = String.format("%.2g%n", userTotal);
         System.out.println("Total coin return is: " + coinReturnTotal);
         userTotal = 0.0;
@@ -103,7 +103,7 @@ public class Main {
         return userTotal;
     }
 
-    public static double giveChangeBackToUser(double totalCoinsInserted, double itemPriceTotal) {
+    private static double giveChangeBackToUser(double totalCoinsInserted, double itemPriceTotal) {
         double changeToGive = totalCoinsInserted - itemPriceTotal;
         String totalAmountInDollarFormat = String.format("%.2g%n", changeToGive);
         System.out.println("Your coinTotal is " + totalAmountInDollarFormat);
