@@ -9,7 +9,7 @@ import java.text.NumberFormat;
 
 public class Main {
 
-    public static void main(String args) {
+    public static void main(String[] args) {
 
         String userProductChoice;
         double priceOfTheUserChoice;
@@ -20,7 +20,7 @@ public class Main {
 
         priceOfTheUserChoice = getChosenItemPrice(userProductChoice);
 
-        coinInsertedByUser = Validator.isValidCoin(args);
+        coinInsertedByUser = Validator.isValidCoin(String.valueOf(args));
 
         coinTotal = addCoinsToTotal(coinInsertedByUser);
 
@@ -105,7 +105,11 @@ public class Main {
 
     private static double giveChangeBackToUser(double totalCoinsInserted, double itemPriceTotal) {
         double changeToGive = totalCoinsInserted - itemPriceTotal;
+        if(changeToGive<0){
+            changeToGive = 0;
+        }
         String totalAmountInDollarFormat = String.format("%.2g%n", changeToGive);
+
         System.out.println("Your coinTotal is " + totalAmountInDollarFormat);
 
         return changeToGive;
